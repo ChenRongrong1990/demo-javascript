@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">
+	document.write("<h1> This is a heading --test</h1>");
+	document.write("<p> This is a paragraph --test.</p>");
+	</script>
+</head>
+<body>
+<p>Js can directly write into html outstream:</p>
+<script>
+	alert("My First JavaScript");
+	document.write("<h1> This is a heading</h1>");
+	document.write("<p> This is a paragraph.</p>");
+
+	function myFunc()
+	{
+		x=document.getElementById("demo"); //get element
+		x.innerHTML="Hello javascript !";  //change context
+		x.style.color="#ffff00";
+	}
+
+	function changeImage()
+	{
+		element=document.getElementById("myimage");
+		if(element.src.match("eg_bulboff"))
+			element.src="eg_bulbon.gif";
+		else
+			element.src="eg_bulboff.gif";
+	}
+
+	function testNum()
+	{
+		var x=document.getElementById("demo1").value;
+		if(x==""||isNaN(x))
+			alert("not numeric");
+	}
+
+</script>
+<p id="demo">it is a good thing!</p>
+<button type="button" onclick="myFunc()">click me</button>
+<img id="myimage" onclick="changeImage()" src="eg_bulboff.gif">
+<input id="demo1" type="text">
+<button type="button1" onclick="testNum()">click me</button>
+</body>
+</html>
