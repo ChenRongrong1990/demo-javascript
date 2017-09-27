@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		var i;
+		var cars = new Array();  //var cars=new Array("Audi","BMW","Volvo"); //var cars=["Audi","BMW","Volvo"];
+		cars[0] = "Audi";
+		cars[1] = "BMW";
+		cars[2] = "Volvo";
+
+		for(i=0;i<cars.length;i++)
+		{
+			document.write(cars[i]+"<br>");
+		}
+
+		var person={firstname:"Bill",lastname:"Gates",id:5566};
+		document.write(person.lastname + "<br />");
+		document.write(person["firstname"] + "<br />");
+
+		peple=new Object();
+		peple.firstname="Bill";
+		peple.lastname="Gates";
+		peple.age=56;
+		peple.eyecolor="red";
+		document.write(peple.firstname + peple.lastname + peple.age + "<br>");
+
+		var message = "Hello world!";
+		var x=message.toUpperCase();
+
+		document.write(x + "<br>");
+
+
+
+	</script>
+</head>
+<body>
+
+</body>
+</html>

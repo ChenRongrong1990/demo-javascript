@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		cars = ["BMW","Volvo","Saab","Ford"];
+		for(var i=0;i<cars.length;i++)
+		{
+			document.write(cars[i]+"<br>");
+		}
+	</script>
+</head>
+<body>
+<p id="demo"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<button onclick="myFunc()">click me</button>
+<button onclick="myFunc_1()">click me</button>
+<button onclick="myFunc_2()">click me</button>
+<script type="text/javascript">
+	function myFunc()
+	{
+		var x;
+		var d=new Date().getDay();
+		switch(d)
+		{
+			case 6:
+				x="Today it's Saturday";
+				break;
+			case 0:
+				x="Today it's Sunday";
+			default:
+				x="Looking forward to the Weekend";
+
+		}
+		document.getElementById("demo").innerHTML=x;
+	}
+
+	function myFunc_1()
+	{
+		var x;
+		var txt="";
+		var person={fname:"Bill",lname:"Gates",age:56};
+		for (x in person)
+		{
+			txt += person[x];
+		}
+		document.getElementById("demo1").innerHTML=txt;
+	}
+
+	function myFunc_2()
+	{
+		var cars=["BMW","KELL","FORD","SAAB"];
+		var i=0;
+		var txt="";
+		while(cars[i])
+		{
+			txt +=cars[i]+" ";
+			i++;
+		}
+		document.getElementById("demo2").innerHTML=txt;
+	}
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<div id="div1" style="width:300px;height: 200px;background-color: green;text-align: center;font-size: 35px">Click me</div>
+	<div id="div2">
+		<p id="pp1">This is a paragph</p>
+		<p id="pp2">This is another paragph</p>
+	</div>
+
+	<script type="text/javascript">
+		var para=document.createElement("h1");
+		var node=document.createTextNode("This is a new paragph");
+		para.appendChild(node);
+
+		var element=document.getElementById("div2");
+		var child=document.getElementById("pp2");
+		element.appendChild(para);
+		element.removeChild(child);
+	</script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		function myFunc()
+		{
+			try
+			{
+				var x=document.getElementById("demo").value;
+				if(x=="") throw "value is empty!";
+				if(isNaN(x)) throw "value is not numeric!";
+				if(x>10)     throw "value is too big!";
+				if(x<5)     throw "value is too small";
+			}
+			catch(err)
+			{
+				var y=document.getElementById("mess");
+				y.innerHTML="Error: " + err + ".";
+			}
+		}
+	</script>
+</head>
+<body>
+	<h1>My first Javascript!</h1>
+	<p> please input a value between 5 and 10 :</p>
+	<input type="text" id="demo">
+	<button onclick="myFunc()">test value</button>
+	<p id="mess"></p>
+</body>
+</html>

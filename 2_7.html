@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<script type="text/javascript">
+		var txt="";
+		function message()
+		{
+			try
+			{
+				adddlert("Welcome guest!");
+			}
+			catch(err)
+			{
+				txt="This page has a error! \n\n";
+				txt +="The error is :"+ err.message + "\n\n";
+				txt +="click to continue. \n\n ";
+				alert(txt);
+			}
+		}
+	</script>
+</head>
+<body>
+<button onclick="message()">click me</button>
+</body>
+</html>
